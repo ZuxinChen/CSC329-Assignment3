@@ -75,12 +75,15 @@ public class Main {
         House findHouse1 = copyMyHashTable.find(owner);
         House findHouse2 = deepCopyMyHashTable.find(owner);
 
+        //Change the data of the original hash table and verify that the copy and deep copy are not affected
         myHashTable.find(owner).setValue(100000);
 
         System.out.println("Original HashTable");
         findHouse(findHouse);
 
+        //Change the data of the copy hash table and verify that the original and deep copy are not affected
         copyMyHashTable.find(owner).setOwner("Lee");
+
         System.out.println("Copy HashTable(Copy constructor)");
         findHouse(findHouse1);
 
