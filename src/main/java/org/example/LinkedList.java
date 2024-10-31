@@ -46,13 +46,13 @@ public class LinkedList {
     void add(House house){
         Node newNode = new Node(house);
 
+        //set tail to new node
         if(head == null){ // if it is empty, add new node to head
             head = newNode;
-            tail = newNode; //set tail to new node
         }else { // if not, add to next node
             tail.next = newNode;
-            tail = newNode; //set tail to new node
         }
+        tail = newNode; //set tail to new node
         size++;
     }
 

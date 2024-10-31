@@ -18,8 +18,8 @@ public class Main {
     public static void main(String[] args) {
         MyHashTable myHashTable = new MyHashTable();
         fileReader(myHashTable);
-        //printAll(myHashTable);
-
+        printAll(myHashTable);
+        System.out.println("--------------------------------------");
         test(myHashTable); //test Copy constructor , deepCopy and find methods
     }
 
@@ -78,16 +78,16 @@ public class Main {
         //Change the data of the original hash table and verify that the copy and deep copy are not affected
         myHashTable.find(owner).setValue(100000);
 
-        System.out.println("Original HashTable");
+        System.out.println("Original HashTable-change the value:");
         findHouse(findHouse);
 
         //Change the data of the copy hash table and verify that the original and deep copy are not affected
         copyMyHashTable.find(owner).setOwner("Lee");
 
-        System.out.println("Copy HashTable(Copy constructor)");
+        System.out.println("Copy HashTable(Copy constructor) - change the owner:");
         findHouse(findHouse1);
 
-        System.out.println("Deep Copy HashTable(deepCopy method)");
+        System.out.println("Deep Copy HashTable(deepCopy method):");
         findHouse(findHouse2);
 
 
